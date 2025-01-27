@@ -1,0 +1,22 @@
+[binaries]
+c = ['${CMAKE_C_COMPILER}', '/nologo']
+cpp = ['${CMAKE_CXX_COMPILER}', '/nologo']
+rc = '${CMAKE_RC_COMPILER}'
+ar = '${CMAKE_AR}'
+strip = '${CMAKE_STRIP}'
+linker = ['${CMAKE_LINKER}', '/nologo']
+
+[host_machine]
+system = 'windows'
+cpu_family = '${host_cpu_family}'
+cpu = '${host_cpu}'
+endian = 'little'
+
+[built-in options]
+c_args = ['/MT', '/DWIN32', '/D_WINDOWS']
+cpp_args = ['/MT', '/DWIN32', '/D_WINDOWS']
+c_link_args = ['/SUBSYSTEM:CONSOLE']
+cpp_link_args = ['/SUBSYSTEM:CONSOLE']
+
+[properties]
+vsenv = true

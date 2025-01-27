@@ -1,0 +1,28 @@
+[binaries]
+c = ['${CMAKE_C_COMPILER}', '-target', '${CMAKE_C_COMPILER_TARGET}', '-isysroot', '${CMAKE_OSX_SYSROOT}']
+cpp = ['${CMAKE_CXX_COMPILER}', '-target', '${CMAKE_CXX_COMPILER_TARGET}', '-isysroot', '${CMAKE_OSX_SYSROOT}']
+objc = ['${CMAKE_OBJC_COMPILER}', '-target', '${CMAKE_OBJC_COMPILER_TARGET}', '-isysroot', '${CMAKE_OSX_SYSROOT}']
+objcpp = ['${CMAKE_OBJCXX_COMPILER}', '-target', '${CMAKE_OBJCXX_COMPILER_TARGET}', '-isysroot', '${CMAKE_OSX_SYSROOT}']
+ar = '${CMAKE_AR}'
+strip = '${CMAKE_STRIP}'
+
+[host_machine]
+system = '${host_system}'
+cpu_family = '${host_cpu_family}'
+cpu = '${host_cpu}'
+endian = 'little'
+
+[built-in options]
+c_args = ['-mios-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
+cpp_args = ['-mios-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
+objc_args = ['-mios-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
+objcpp_args = ['-mios-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
+
+[properties]
+root = '${CMAKE_OSX_SYSROOT}'
+
+[build_machine]
+system = '${build_system}'
+cpu_family = '${build_cpu_family}'
+cpu = '${build_cpu}'
+endian = 'little'

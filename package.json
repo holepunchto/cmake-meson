@@ -1,0 +1,19 @@
+{
+  "name": "cmake-meson",
+  "version": "1.0.0",
+  "description": "Meson bridge for CMake",
+  "files": [
+    "*.cmake",
+    "cross-files"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/cmake-meson.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/cmake-meson/issues"
+  },
+  "homepage": "https://github.com/holepunchto/cmake-meson#readme"
+}
