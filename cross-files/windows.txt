@@ -7,7 +7,7 @@ strip = '${CMAKE_STRIP}'
 linker = ['${CMAKE_LINKER}', '/nologo']
 
 [host_machine]
-system = 'windows'
+system = '${host_system}'
 cpu_family = '${host_cpu_family}'
 cpu = '${host_cpu}'
 endian = 'little'
@@ -20,3 +20,9 @@ cpp_link_args = ['/SUBSYSTEM:CONSOLE']
 
 [properties]
 vsenv = true
+
+[build_machine]
+system = '${build_system}'
+cpu_family = '${build_cpu_family}'
+cpu = '${build_cpu}'
+endian = 'little'

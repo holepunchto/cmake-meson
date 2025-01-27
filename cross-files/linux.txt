@@ -6,7 +6,7 @@ strip = '${CMAKE_STRIP}'
 pkgconfig = '${CMAKE_PKG_CONFIG}'
 
 [host_machine]
-system = 'linux'
+system = '${host_system}'
 cpu_family = '${host_cpu_family}'
 cpu = '${host_cpu}'
 endian = '${host_endian}'
@@ -17,3 +17,9 @@ cpp_args = []
 
 [properties]
 root = '${CMAKE_SYSROOT}'
+
+[build_machine]
+system = '${build_system}'
+cpu_family = '${build_cpu_family}'
+cpu = '${build_cpu}'
+endian = 'little'
