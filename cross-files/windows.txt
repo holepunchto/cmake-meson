@@ -1,10 +1,10 @@
 [binaries]
-c = ['${CMAKE_C_COMPILER}', '/nologo']
-cpp = ['${CMAKE_CXX_COMPILER}', '/nologo']
+c = ['${CMAKE_C_COMPILER}', '--target=${CMAKE_C_COMPILER_TARGET}']
+cpp = ['${CMAKE_CXX_COMPILER}', '--target=${CMAKE_CXX_COMPILER_TARGET}']
 rc = '${CMAKE_RC_COMPILER}'
 ar = '${CMAKE_AR}'
 strip = '${CMAKE_STRIP}'
-linker = ['${CMAKE_LINKER}', '/nologo']
+linker = '${CMAKE_LINKER}'
 
 [host_machine]
 system = '${host_system}'
