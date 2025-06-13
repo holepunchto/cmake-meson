@@ -1,6 +1,7 @@
 [binaries]
 c = ['${CMAKE_C_COMPILER}', '--target=${CMAKE_C_COMPILER_TARGET}']
 cpp = ['${CMAKE_CXX_COMPILER}', '--target=${CMAKE_CXX_COMPILER_TARGET}']
+nasm = '${CMAKE_ASM_NASM_COMPILER}'
 rc = '${CMAKE_RC_COMPILER}'
 ar = '${CMAKE_AR}'
 strip = '${CMAKE_STRIP}'
