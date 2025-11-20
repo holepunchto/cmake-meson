@@ -3,7 +3,6 @@ c = ['${CMAKE_C_COMPILER}', '--target=${CMAKE_C_COMPILER_TARGET}', '--sysroot=${
 cpp = ['${CMAKE_CXX_COMPILER}', '--target=${CMAKE_CXX_COMPILER_TARGET}', '--sysroot=${CMAKE_SYSROOT}']
 ar = '${CMAKE_AR}'
 strip = '${CMAKE_STRIP}'
-pkg-config = '${CMAKE_PKG_CONFIG}'
 
 [host_machine]
 system = '${host_system}'
