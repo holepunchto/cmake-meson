@@ -130,6 +130,16 @@ function(meson_cross_file result)
   meson_cpu(build_cpu BUILD)
   meson_cpu_family(build_cpu_family BUILD)
 
+  if(LINUX AND NOT DEFINED CMAKE_PKG_CONFIG)
+    find_program(
+      pkg-config
+      NAMES pkg-config
+      REQUIRED
+    )
+
+    set(CMAKE_PKG_CONFIG "${pkg-config}")
+  endif()
+
   file(READ "${meson_module_dir}/cross-files/${host_system}.txt" template)
 
   string(CONFIGURE "${template}" ${result})
