@@ -120,8 +120,23 @@ function(meson_buildtype result)
   return(PROPAGATE ${result})
 endfunction()
 
+function(meson_subsystem result)
+  if(CMAKE_SYSTEM_NAME MATCHES "iOS")
+    if(CMAKE_OSX_SYSROOT MATCHES "iPhoneSimulator")
+      set(${result} "ios-simulator")
+    else()
+      set(${result} "ios")
+    endif()
+  else()
+    set(${result} "macos")
+  endif()
+
+  return(PROPAGATE ${result})
+endfunction()
+
 function(meson_cross_file result)
   meson_system(host_system)
+  meson_subsystem(host_subsystem)
   meson_cpu(host_cpu)
   meson_cpu_family(host_cpu_family)
   meson_endian(host_endian)
@@ -140,7 +155,13 @@ function(meson_cross_file result)
     set(CMAKE_PKG_CONFIG "${pkg-config}")
   endif()
 
-  file(READ "${meson_module_dir}/cross-files/${host_system}.txt" template)
+  if(APPLE)
+    set(host_platform "apple")
+  else()
+    set(host_platform "${host_system}")
+  endif()
+
+  file(READ "${meson_module_dir}/cross-files/${host_platform}.txt" template)
 
   string(CONFIGURE "${template}" ${result})
 
