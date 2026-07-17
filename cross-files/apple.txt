@@ -7,16 +7,17 @@ ar = '${CMAKE_AR}'
 strip = '${CMAKE_STRIP}'
 
 [host_machine]
-system = '${host_system}'
+system = 'darwin'
+subsystem = '${host_subsystem}'
 cpu_family = '${host_cpu_family}'
 cpu = '${host_cpu}'
 endian = 'little'
 
 [built-in options]
-c_args = ['-mios-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
-cpp_args = ['-mios-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
-objc_args = ['-mios-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
-objcpp_args = ['-mios-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
+c_args = ['-m${host_subsystem}-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
+cpp_args = ['-m${host_subsystem}-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
+objc_args = ['-m${host_subsystem}-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
+objcpp_args = ['-m${host_subsystem}-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}']
 
 [properties]
 root = '${CMAKE_OSX_SYSROOT}'
