@@ -16,8 +16,8 @@ endian = 'little'
 [built-in options]
 c_args = ['/MT', '/DWIN32', '/D_WINDOWS']
 cpp_args = ['/MT', '/DWIN32', '/D_WINDOWS']
-c_link_args = ['/SUBSYSTEM:CONSOLE']
-cpp_link_args = ['/SUBSYSTEM:CONSOLE']
+c_link_args = ['/link', '/SUBSYSTEM:CONSOLE']
+cpp_link_args = ['/link', '/SUBSYSTEM:CONSOLE']
 
 [properties]
 vsenv = true
