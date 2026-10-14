@@ -3,6 +3,7 @@ c = ['${CMAKE_C_COMPILER}', '--target=${CMAKE_C_COMPILER_TARGET}', '-isysroot', 
 cpp = ['${CMAKE_CXX_COMPILER}', '--target=${CMAKE_CXX_COMPILER_TARGET}', '-isysroot', '${CMAKE_OSX_SYSROOT}']
 objc = ['${CMAKE_OBJC_COMPILER}', '--target=${CMAKE_OBJC_COMPILER_TARGET}', '-isysroot', '${CMAKE_OSX_SYSROOT}']
 objcpp = ['${CMAKE_OBJCXX_COMPILER}', '--target=${CMAKE_OBJCXX_COMPILER_TARGET}', '-isysroot', '${CMAKE_OSX_SYSROOT}']
+nasm = '${CMAKE_ASM_NASM_COMPILER}'
 ar = '${CMAKE_AR}'
 strip = '${CMAKE_STRIP}'
 
