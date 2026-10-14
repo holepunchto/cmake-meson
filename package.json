@@ -1,6 +1,6 @@
 {
   "name": "cmake-meson",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Meson bridge for CMake",
   "files": [
     "*.cmake",
